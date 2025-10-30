@@ -1,0 +1,167 @@
+/* -------------------------
+   Oscar Awards Explorer
+   Theme: Yellow & Black
+   Author: Pramit Kumar Naik
+-------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER ---------- */
+.explorer-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(15, 15, 15, 0.95)),
+              url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+}
+
+.explorer-header h1 {
+  font-size: 3rem;
+  color: #ffcc00;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  animation: fadeInDown 1s ease;
+}
+
+.explorer-header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease;
+}
+
+.filters {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filters input,
+.filters select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 260px;
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #ffcc00;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+  background: #262626;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+/* ---------- RESULTS GRID ---------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex: 1;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid #333;
+  border-left: 4px solid #ffcc00;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #ffd633;
+  box-shadow: 0 6px 18px rgba(255, 204, 0, 0.25);
+}
+
+.card h2 {
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- FOOTER ---------- */
+.explorer-footer {
+  background: #000;
+  color: #ffcc00;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  border-top: 1px solid #222;
+}
+
+.explorer-footer .back-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.explorer-footer .back-btn:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .explorer-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .results-grid {
+    padding: 2rem 1rem;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}

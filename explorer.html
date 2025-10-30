@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oscar Awards Explorer</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="explorer-header">
+    <div class="overlay">
+      <h1>🏆 Explore Oscar Awards</h1>
+      <p>Discover winners, nominees, and films that made history</p>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="🔍 Search by Actor, Movie, or Category...">
+        <select id="yearSelect">
+          <option value="">All Years</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="resultsContainer" class="results-grid">
+    <!-- Cards will appear here dynamically -->
+  </main>
+
+  <footer class="explorer-footer">
+    <p>🎬 Dataset Source: The Oscar Awards (Kaggle) | Built by <strong>Pramit Kumar Naik</strong></p>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
